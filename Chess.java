@@ -17,6 +17,7 @@ public class Chess extends Canvas
     public void paint (Graphics g)
     {
         drawBoard(g);
+        addNotation(g);
     }
     public void drawBoard(Graphics g)
     {
@@ -37,5 +38,37 @@ public class Chess extends Canvas
         g.fillRect(75, 900, 850, 25);
         g.fillRect(900, 75, 25, 850);
         g.fillRect(75, 75, 25, 850);
+    }
+
+    public void addNotation(Graphics g)
+    {
+        g.setColor(Color.BLACK);
+        g.setFont(new Font("Impact", Font.PLAIN, 30));
+        String letters = "ABCDEFGH";
+        String numbers = "87654321";
+        int index = 0;
+        for (int i = 145; i <= 845; i += 100)
+        {
+            g.drawString(letters.substring(index, index + 1), i, 65);
+            index++;
+        }
+        index = 0;
+        for (int i = 145; i <= 845; i += 100)
+        {
+            g.drawString(letters.substring(index, index + 1), i, 965);
+            index++;
+        }
+        index = 0;
+        for (int i = 155; i <= 855; i += 100)
+        {
+            g.drawString(numbers.substring(index, index + 1), 50, i);
+            index++;
+        }
+        index = 0;
+        for (int i = 155; i <= 855; i += 100)
+        {
+            g.drawString(numbers.substring(index, index + 1), 935, i);
+            index++;
+        }
     }
 }
