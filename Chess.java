@@ -20,10 +20,12 @@ public class Chess extends Canvas implements MouseListener
     {
         drawBoard(g);
         addNotation(g);
-        addImages(g);
+        addWhitePawns(g);
+        addBlackPawns(g);
     }
     public void drawBoard(Graphics g)
     {
+        g.setColor(new Color(1, 68, 33));
         int count = 1;
         for (int i = 60; i <= 480; i += 120)
         {
@@ -75,11 +77,74 @@ public class Chess extends Canvas implements MouseListener
         }
     }
 
-    public void addImages(Graphics g)
+    public void addWhitePawns(Graphics g)
     {
         Icon whiteAPawn = new ImageIcon("Images/WhitePawn.png");
         JLabel whiteAPawnLabel = new JLabel(whiteAPawn);
-        whiteAPawn.paintIcon(this, g, 60, 60);
+        whiteAPawn.paintIcon(this, g, 60, 120);
+
+        Icon whiteBPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteBPawnLabel = new JLabel(whiteBPawn);
+        whiteAPawn.paintIcon(this, g, 120, 120);
+
+        Icon whiteCPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteCPawnLabel = new JLabel(whiteCPawn);
+        whiteCPawn.paintIcon(this, g, 180, 120);
+
+        Icon whiteDPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteDPawnLabel = new JLabel(whiteDPawn);
+        whiteDPawn.paintIcon(this, g, 240, 120);
+
+        Icon whiteEPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteEPawnLabel = new JLabel(whiteEPawn);
+        whiteEPawn.paintIcon(this, g, 300, 120);
+
+        Icon whiteFPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteFPawnLabel = new JLabel(whiteFPawn);
+        whiteFPawn.paintIcon(this, g, 360, 120);
+
+        Icon whiteGPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteGPawnLabel = new JLabel(whiteGPawn);
+        whiteGPawn.paintIcon(this, g, 420, 120);
+
+        Icon whiteHPawn = new ImageIcon("Images/WhitePawn.png");
+        JLabel whiteHPawnLabel = new JLabel(whiteHPawn);
+        whiteHPawn.paintIcon(this, g, 480, 120);
+    }
+
+    public void addBlackPawns(Graphics g)
+    {
+        Icon blackAPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackAPawnLabel = new JLabel(blackAPawn);
+        blackAPawn.paintIcon(this, g, 60, 420);
+
+        Icon blackBPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackBPawnLabel = new JLabel(blackBPawn);
+        blackAPawn.paintIcon(this, g, 120, 420);
+
+        Icon blackCPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackCPawnLabel = new JLabel(blackCPawn);
+        blackCPawn.paintIcon(this, g, 180, 420);
+
+        Icon blackDPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackDPawnLabel = new JLabel(blackDPawn);
+        blackDPawn.paintIcon(this, g, 240, 420);
+
+        Icon blackEPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackEPawnLabel = new JLabel(blackEPawn);
+        blackEPawn.paintIcon(this, g, 300, 420);
+
+        Icon blackFPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackFPawnLabel = new JLabel(blackFPawn);
+        blackFPawn.paintIcon(this, g, 360, 420);
+
+        Icon blackGPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackGPawnLabel = new JLabel(blackGPawn);
+        blackGPawn.paintIcon(this, g, 420, 420);
+
+        Icon blackHPawn = new ImageIcon("Images/BlackPawn.png");
+        JLabel blackHPawnLabel = new JLabel(blackHPawn);
+        blackHPawn.paintIcon(this, g, 480, 420);
     }
 
     @Override
